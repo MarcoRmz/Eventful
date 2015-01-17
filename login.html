@@ -36,54 +36,6 @@
 
     <body id="page-top" class="index">
 
-        <script>
-          //***********************************************************
-          // Be sure to add your Parse Keys and Facebook App ID Below!
-          //***********************************************************
-
-          // Initialize Parse
-          Parse.initialize("dB1ANk1pqDccOoQnapFUnF78V2Sfvb0koKE16RC5", "MW2XuVu8m1mCszvFTnVpETs1ayUkM0IfXwG3AeH4");
-
-          function register(){
-          var x = document.getElementById("frm1");
-          var user = new Parse.User();
-          user.set("fname", x.elements[0].value);
-          user.set("lname", x.elements[1].value);
-          user.set("username", x.elements[2].value);
-          user.set("password", x.elements[3].value);
-          user.set("email", x.elements[4].value);
-          user.signUp(null, {
-            success: function(user) {
-              // Hooray! Let them use the app now.
-              alert("Success! Welcome " + x.elements[2].value + "!");
-              move();
-            },
-            error: function(user, error) {
-              // Show the error message somewhere and let the user try again.
-              alert("Error: " + error.code + " " + error.message);
-            }
-          });
-        }
-
-        function login() {
-          var x = document.getElementById("frm2");
-          Parse.User.logIn(x.elements[0].value, x.elements[1].value, {
-            success: function(user) {
-            // Do stuff after successful login.
-            alert("Welcome " + x.elements[0].value + "!");
-            move();
-
-            },
-            error: function(user, error) {
-            // The login failed. Check error to see why.
-            alert("Error: " + error.code + " " + error.message);
-
-            }
-          });
-        }
-          
-        </script>
-
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -148,44 +100,50 @@
 								</div>
 								<!-- Función que añade los datos a la base de datos -->
 								<script>
-								Parse.initialize("Ggx4FvZ6WZkF4IDVpCOcIGIFJ9r6w54xnIQHn2WR",  "Q597e1ww6dn8RoazDcPwDB9K3Sot1bfoS70nkPnx");
-							    function register(){
-							      var x = document.getElementById("frm1");
-							      var user = new Parse.User();
-							      user.set("fname", x.elements[0].value);
-							      user.set("lname", x.elements[1].value);
-							      user.set("username", x.elements[2].value);
-							      user.set("password", x.elements[3].value);
-							      user.set("email", x.elements[4].value);
-							      user.signUp(null, {
-							        success: function(user) {
-							          // Hooray! Let them use the app now.
-							          alert("Successful! Welcome " + x.elements[2].value + "!");
-							          move();
-							        },
-							        error: function(user, error) {
-							          // Show the error message somewhere and let the user try again.
-							          alert("Error: " + error.code + " " + error.message);
-							        }
-							      });
-							    }
+								//***********************************************************
+						          // Be sure to add your Parse Keys and Facebook App ID Below!
+						          //***********************************************************
 
-							    function login() {
-								  var x = document.getElementById("frm2");
-								  Parse.User.logIn(x.elements[0].value, x.elements[1].value, {
-								    success: function(user) {
-								    // Do stuff after successful login.
-								    alert("Welcome " + x.elements[0].value + "!");
-								    move();
+						          // Initialize Parse
+						          Parse.initialize("dB1ANk1pqDccOoQnapFUnF78V2Sfvb0koKE16RC5", "MW2XuVu8m1mCszvFTnVpETs1ayUkM0IfXwG3AeH4");
 
-								    },
-								    error: function(user, error) {
-								    // The login failed. Check error to see why.
-								    alert("Error: " + error.code + " " + error.message);
+						          function register(){
+						          var x = document.getElementById("frm1");
+						          var user = new Parse.User();
+						          user.set("fname", x.elements[0].value);
+						          user.set("lname", x.elements[1].value);
+						          user.set("username", x.elements[2].value);
+						          user.set("password", x.elements[3].value);
+						          user.set("email", x.elements[4].value);
+						          user.signUp(null, {
+						            success: function(user) {
+						              // Hooray! Let them use the app now.
+						              alert("Success! Welcome " + x.elements[2].value + "!");
+						              move();
+						            },
+						            error: function(user, error) {
+						              // Show the error message somewhere and let the user try again.
+						              alert("Error: " + error.code + " " + error.message);
+						            }
+						          });
+						        }
 
-								    }
-								  });
-								}
+						        function login() {
+						          var x = document.getElementById("frm2");
+						          Parse.User.logIn(x.elements[0].value, x.elements[1].value, {
+						            success: function(user) {
+						            // Do stuff after successful login.
+						            alert("Welcome " + x.elements[0].value + "!");
+						            move();
+
+						            },
+						            error: function(user, error) {
+						            // The login failed. Check error to see why.
+						            alert("Error: " + error.code + " " + error.message);
+
+						            }
+						          });
+						        }
 
 							    </script>
 							    <div class="login_left">

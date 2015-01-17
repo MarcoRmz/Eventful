@@ -122,7 +122,7 @@
 						              move();
 						            },
 						            user.signUp().then(function(user) {
-								      res.redirect('/index.html');
+								      window.location.replace("http://marcormz.me/Eventful");
 								    }
 						            error: function(user, error) {
 						              // Show the error message somewhere and let the user try again.
@@ -136,8 +136,9 @@
 						          Parse.User.logIn(x.elements[0].value, x.elements[1].value, {
 						            success: function(user) {
 						            // Do stuff after successful login.
-						            res.redirect('/index.html');
+						            window.location.replace("http://marcormz.me/Eventful");
 						            alert("Welcome " + x.elements[0].value + "!");
+						            window.location.replace("http://marcormz.me/Eventful");
 						            move();
 						            },
 						            error: function(user, error) {

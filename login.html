@@ -55,7 +55,7 @@
           user.signUp(null, {
             success: function(user) {
               // Hooray! Let them use the app now.
-              alert("Registro exitoso! Bienvenido " + x.elements[2].value + "!");
+              alert("Success! Welcome " + x.elements[2].value + "!");
               move();
             },
             error: function(user, error) {
@@ -70,7 +70,7 @@
           Parse.User.logIn(x.elements[0].value, x.elements[1].value, {
             success: function(user) {
             // Do stuff after successful login.
-            alert("Bienvenido " + x.elements[0].value + "!");
+            alert("Welcome " + x.elements[0].value + "!");
             move();
 
             },

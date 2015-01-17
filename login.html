@@ -143,22 +143,17 @@
         <header>
             <div class="container">
                 <div class="row">
-                    <!-- start top_bg -->
-					<div class="top_bg">
-						<div class="wrap">
-							<div class="main_top">
-								<h2 class="style">Crear cuenta o hacer Login</h2>
-							</div>
-						</div>
-					</div>
+                	<div class="intro-text">
+                        <span class="skills">Create an account or Login</span>
+                    </div>
 
 					<!-- start main -->
 					<div class="main_bg">
 						<div class="wrap">
 							<div class="main">
 								<div class="login_left">
-									<h3>Nuevos clientes:</h3>
-									<h4> ¡Bienvenidos! </h4>
+									<h3>New Users:</h3>
+									<h4> Welcome! </h4>
 									<p>Al crear una cuenta con nosotros, serán capaces de ver los diferentes productos con los que contamos en nuestra tienda. También serán hábiles de añadir productos a un carrito de compras, el cual podrán pagar con tarjeta de crédito y les facilitaremos la entrega a domicilio. <br/> 
 									Gracias por su interés.
 									</p>
@@ -189,7 +184,7 @@
 							      user.signUp(null, {
 							        success: function(user) {
 							          // Hooray! Let them use the app now.
-							          alert("Registro exitoso! Bienvenido " + x.elements[2].value + "!");
+							          alert("Successful! Welcome " + x.elements[2].value + "!");
 							          move();
 							        },
 							        error: function(user, error) {
@@ -204,7 +199,7 @@
 								  Parse.User.logIn(x.elements[0].value, x.elements[1].value, {
 								    success: function(user) {
 								    // Do stuff after successful login.
-								    alert("Bienvenido " + x.elements[0].value + "!");
+								    alert("Welcome " + x.elements[0].value + "!");
 								    move();
 
 								    },
@@ -218,8 +213,8 @@
 
 							    </script>
 							    <div class="login_left">
-									<h3>Clientes registrados</h3>
-									<p>Bienvenido de vuelta</p>
+									<h3>Login</h3>
+									<p>Welcome Back</p>
 									<div class="registration_form">
 									 <!-- Form -->
 										<form id="frm2" action="form_action.asp">

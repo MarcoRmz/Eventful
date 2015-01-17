@@ -136,12 +136,10 @@
 						          Parse.User.logIn(x.elements[0].value, x.elements[1].value, {
 						            success: function(user) {
 						            // Do stuff after successful login.
+						            res.redirect('/index.html');
 						            alert("Welcome " + x.elements[0].value + "!");
 						            move();
 						            },
-						            user.logIn().then(function(user) {
-								      res.redirect('/index.html');
-								    }
 						            error: function(user, error) {
 						            // The login failed. Check error to see why.
 						            alert("Error: " + error.code + " " + error.message);

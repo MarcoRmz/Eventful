@@ -141,97 +141,109 @@
         </nav>
 
         <header>
-        	<!-- start top_bg -->
-			<div class="top_bg">
-				<div class="wrap">
-					<div class="main_top">
-						<h2 class="style">Crear cuenta o hacer Login</h2>
-					</div>
-				</div>
-			</div>
-
-			<!-- start main -->
-			<div class="main_bg">
-				<div class="wrap">
-					<div class="main">
-						<div class="login_left">
-							<h3>Nuevos clientes:</h3>
-							<h4> ¡Bienvenidos! </h4>
-							<p>Al crear una cuenta con nosotros, serán capaces de ver los diferentes productos con los que contamos en nuestra tienda. También serán hábiles de añadir productos a un carrito de compras, el cual podrán pagar con tarjeta de crédito y les facilitaremos la entrega a domicilio. <br/> 
-							Gracias por su interés.
-							</p>
-							<div class="registration_form">
-							 <!-- Form -->
-								<form id="frm1" action="form_action.asp">
-							      <p align="left">First name:<br/> <input type="text" name="fname" placeholder="e.g. John"><br></p>
-							      <p align="left">Last name:<br/> <input type="text" name="lname" placeholder="e.g. Smith"><br></p>
-							      <p align="left">Username:<br/> <input type="text" name="uname" placeholder="e.g. John23"><br></p>
-							      <p align="left">Password: <br/> <input type="password" name="pass" placeholder="e.g. MyPass*23"><br></p>
-							      <p align="left">Email: <br/> <input type="text" name="mail" placeholder="e.g. john@gmail.com"><br></p>
-							      <p align="center"><input type="button" onclick="register()" value="Register" ></p>
-							    </form>
-								<!-- /Form -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img class="img-responsive" src="img/profile.png" alt="">
+                        <div class="intro-text">
+                            <span class="name">Start Bootstrap</span>
+                            <hr class="star-light">
+                            <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                        </div>
+                    </div>
+                    <!-- start top_bg -->
+					<div class="top_bg">
+						<div class="wrap">
+							<div class="main_top">
+								<h2 class="style">Crear cuenta o hacer Login</h2>
 							</div>
 						</div>
-						<!-- Función que añade los datos a la base de datos -->
-						<script>
-						Parse.initialize("Ggx4FvZ6WZkF4IDVpCOcIGIFJ9r6w54xnIQHn2WR",  "Q597e1ww6dn8RoazDcPwDB9K3Sot1bfoS70nkPnx");
-					    function register(){
-					      var x = document.getElementById("frm1");
-					      var user = new Parse.User();
-					      user.set("fname", x.elements[0].value);
-					      user.set("lname", x.elements[1].value);
-					      user.set("username", x.elements[2].value);
-					      user.set("password", x.elements[3].value);
-					      user.set("email", x.elements[4].value);
-					      user.signUp(null, {
-					        success: function(user) {
-					          // Hooray! Let them use the app now.
-					          alert("Registro exitoso! Bienvenido " + x.elements[2].value + "!");
-					          move();
-					        },
-					        error: function(user, error) {
-					          // Show the error message somewhere and let the user try again.
-					          alert("Error: " + error.code + " " + error.message);
-					        }
-					      });
-					    }
+					</div>
 
-					    function login() {
-						  var x = document.getElementById("frm2");
-						  Parse.User.logIn(x.elements[0].value, x.elements[1].value, {
-						    success: function(user) {
-						    // Do stuff after successful login.
-						    alert("Bienvenido " + x.elements[0].value + "!");
-						    move();
+					<!-- start main -->
+					<div class="main_bg">
+						<div class="wrap">
+							<div class="main">
+								<div class="login_left">
+									<h3>Nuevos clientes:</h3>
+									<h4> ¡Bienvenidos! </h4>
+									<p>Al crear una cuenta con nosotros, serán capaces de ver los diferentes productos con los que contamos en nuestra tienda. También serán hábiles de añadir productos a un carrito de compras, el cual podrán pagar con tarjeta de crédito y les facilitaremos la entrega a domicilio. <br/> 
+									Gracias por su interés.
+									</p>
+									<div class="registration_form">
+									 <!-- Form -->
+										<form id="frm1" action="form_action.asp">
+									      <p align="left">First name:<br/> <input type="text" name="fname" placeholder="e.g. John"><br></p>
+									      <p align="left">Last name:<br/> <input type="text" name="lname" placeholder="e.g. Smith"><br></p>
+									      <p align="left">Username:<br/> <input type="text" name="uname" placeholder="e.g. John23"><br></p>
+									      <p align="left">Password: <br/> <input type="password" name="pass" placeholder="e.g. MyPass*23"><br></p>
+									      <p align="left">Email: <br/> <input type="text" name="mail" placeholder="e.g. john@gmail.com"><br></p>
+									      <p align="center"><input type="button" onclick="register()" value="Register" ></p>
+									    </form>
+										<!-- /Form -->
+									</div>
+								</div>
+								<!-- Función que añade los datos a la base de datos -->
+								<script>
+								Parse.initialize("Ggx4FvZ6WZkF4IDVpCOcIGIFJ9r6w54xnIQHn2WR",  "Q597e1ww6dn8RoazDcPwDB9K3Sot1bfoS70nkPnx");
+							    function register(){
+							      var x = document.getElementById("frm1");
+							      var user = new Parse.User();
+							      user.set("fname", x.elements[0].value);
+							      user.set("lname", x.elements[1].value);
+							      user.set("username", x.elements[2].value);
+							      user.set("password", x.elements[3].value);
+							      user.set("email", x.elements[4].value);
+							      user.signUp(null, {
+							        success: function(user) {
+							          // Hooray! Let them use the app now.
+							          alert("Registro exitoso! Bienvenido " + x.elements[2].value + "!");
+							          move();
+							        },
+							        error: function(user, error) {
+							          // Show the error message somewhere and let the user try again.
+							          alert("Error: " + error.code + " " + error.message);
+							        }
+							      });
+							    }
 
-						    },
-						    error: function(user, error) {
-						    // The login failed. Check error to see why.
-						    alert("Error: " + error.code + " " + error.message);
+							    function login() {
+								  var x = document.getElementById("frm2");
+								  Parse.User.logIn(x.elements[0].value, x.elements[1].value, {
+								    success: function(user) {
+								    // Do stuff after successful login.
+								    alert("Bienvenido " + x.elements[0].value + "!");
+								    move();
 
-						    }
-						  });
-						}
+								    },
+								    error: function(user, error) {
+								    // The login failed. Check error to see why.
+								    alert("Error: " + error.code + " " + error.message);
 
-					    </script>
-					    <div class="login_left">
-							<h3>Clientes registrados</h3>
-							<p>Bienvenido de vuelta</p>
-							<div class="registration_form">
-							 <!-- Form -->
-								<form id="frm2" action="form_action.asp">
-							      <p align="center"><input type="text" name="username" placeholder="Username" /> </p>
-							      <p align="center"><input type="password" name="password" placeholder="Password"/> </p>
-							      <p align="center"><input type="button" onclick="login()" value="Login" ></p>
-							    </form>
-								<!-- /Form -->
+								    }
+								  });
+								}
+
+							    </script>
+							    <div class="login_left">
+									<h3>Clientes registrados</h3>
+									<p>Bienvenido de vuelta</p>
+									<div class="registration_form">
+									 <!-- Form -->
+										<form id="frm2" action="form_action.asp">
+									      <p align="center"><input type="text" name="username" placeholder="Username" /> </p>
+									      <p align="center"><input type="password" name="password" placeholder="Password"/> </p>
+									      <p align="center"><input type="button" onclick="login()" value="Login" ></p>
+									    </form>
+										<!-- /Form -->
+									</div>
+								</div>
+								<div class="clear"></div>
 							</div>
 						</div>
-						<div class="clear"></div>
 					</div>
-				</div>
-			</div>
+                </div>
+            </div>
         </header>
 
         <!-- jQuery Version 1.11.0 -->

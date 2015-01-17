@@ -24,6 +24,13 @@
 
         <!-- Scripts -->
         <script type="text/javascript" src="https://www.parsecdn.com/js/parse-1.3.3.min.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  		<script>
+		  $(function() {
+		    $( "#datepicker" ).datepicker();
+		  });
+		 </script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -100,12 +107,13 @@
 									<div class="registration_form">
 									 <!-- Form -->
 										<form id="frm1" action="form_action.asp">
-									      <p align="left">Event name:<br/> <input type="text" name="fname" placeholder="e.g. John"><br></p>
-									      <p align="left">Last name:<br/> <input type="text" name="lname" placeholder="e.g. Smith"><br></p>
-									      <p align="left">Username:<br/> <input type="text" name="uname" placeholder="e.g. John23"><br></p>
-									      <p align="left">Password: <br/> <input type="password" name="pass" placeholder="e.g. MyPass*23"><br></p>
+									      <p align="left">Event name:<br/> <input type="text" name="name" placeholder="e.g. Hackathon"><br></p>
+									      <p>Event start date: <input type="text" id="datepicker"></p>
+									      <p>Event end date: <input type="text" id="datepicker"></p>
+									      <p align="left">Event Description:<br/> <input type="text" name="description" placeholder="e.g. Hackathon is the greatest hackathon"><br></p>
+									      <p align="left">Schedule:<br/> <input type="text" name="uname" placeholder="e.g. 9:00am Registration"><br></p>
 									      <p align="left">Contact email: <br/> <input type="text" name="mail" placeholder="e.g. john@gmail.com"><br></p>
-									      <p align="center"><input type="button" onclick="register()" value="Register" ></p>
+									      <p align="center"><input type="button" onclick="register()" value="Register Event"></p>
 									    </form>
 										<!-- /Form -->
 									</div>

@@ -120,6 +120,7 @@
 						              // Hooray! Let them use the app now.
 						              alert("Success! Welcome " + x.elements[0].value + "!");
 						              move();
+						              res.redirect('/index.html');
 						            },
 						            error: function(user, error) {
 						              // Show the error message somewhere and let the user try again.
@@ -135,7 +136,7 @@
 						            // Do stuff after successful login.
 						            alert("Welcome " + x.elements[0].value + "!");
 						            move();
-
+						            res.redirect('/index.html');
 						            },
 						            error: function(user, error) {
 						            // The login failed. Check error to see why.

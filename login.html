@@ -32,6 +32,56 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+        <script>
+								//***********************************************************
+						          // Be sure to add your Parse Keys and Facebook App ID Below!
+						          //***********************************************************
+
+						          // Initialize Parse
+						          Parse.initialize("dB1ANk1pqDccOoQnapFUnF78V2Sfvb0koKE16RC5", "MW2XuVu8m1mCszvFTnVpETs1ayUkM0IfXwG3AeH4");
+
+						          function register(){
+						          var x = document.getElementById("frm1");
+						          var user = new Parse.User();
+						          user.set("fname", x.elements[0].value);
+						          user.set("lname", x.elements[1].value);
+						          user.set("username", x.elements[2].value);
+						          user.set("password", x.elements[3].value);
+						          user.set("email", x.elements[4].value);
+						          user.signUp(null, {
+						            success: function(user) {
+						              // Hooray! Let them use the app now.
+						              alert("Success! Welcome " + x.elements[0].value + "!");
+						              move();
+						            },
+						            user.signUp().then(function(user) {
+								      window.location.replace("http://marcormz.me/Eventful");
+								    }
+						            error: function(user, error) {
+						              // Show the error message somewhere and let the user try again.
+						              alert("Error: " + error.code + " " + error.message);
+						            }
+						          });
+						        }
+
+						        function login() {
+						          var x = document.getElementById("frm2");
+						          Parse.User.logIn(x.elements[0].value, x.elements[1].value, {
+						            success: function(user) {
+						            // Do stuff after successful login.
+						            alert("Welcome " + x.elements[0].value + "!");
+						            move();
+						            },
+						            error: function(user, error) {
+						            // The login failed. Check error to see why.
+						            alert("Error: " + error.code + " " + error.message);
+
+						            }
+						          });
+						        }
+
+							    </script>
+
     </head>
 
     <body id="page-top" class="index">
